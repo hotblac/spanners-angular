@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+
+  angular:
+    build: .
+    image: hotblac/spanners-angular:latest
+    ports:
+      - "8081:80"
+    restart: always
