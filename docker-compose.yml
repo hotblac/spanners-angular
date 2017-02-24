@@ -7,9 +7,14 @@ services:
     image: hotblac/spanners-angular:latest
     ports:
       - "8081:80"
+    external_links:
+      - api:spanners-api
+    networks:
+      - spanners-services
     restart: always
 
 networks:
-  default:
+  # Connect to network provided by the main spanners project which includes the spanners-api
+  spanners-services:
     external:
       name: spanners_default
