@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {Spanner} from "./spanner";
 import {Http, Response} from "@angular/http";
 import {Observable} from "rxjs";
+import 'rxjs/add/operator/map';
 
 @Injectable()
 export class SpannersService {
